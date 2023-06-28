@@ -39,8 +39,4 @@
     </OpenApiReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BlazorCRUD.model\BlazorCRUD.model.csproj" />
-  </ItemGroup>
-
 </Project>
