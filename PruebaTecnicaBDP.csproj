@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Services\" />
     <Folder Include="wwwroot\sample-data\" />
   </ItemGroup>
 
@@ -37,6 +38,10 @@
     <OpenApiReference Include="OpenAPIs\peliculas.json" CodeGenerator="NSwagCSharp">
       <SourceUri>http://albertbdp.somee.com/api/peliculas</SourceUri>
     </OpenApiReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FilmsCRUD.model\FilmsCRUD.model.csproj" />
   </ItemGroup>
 
 </Project>

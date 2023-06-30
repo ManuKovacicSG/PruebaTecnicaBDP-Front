@@ -2,14 +2,23 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    background: #000000;
 }
 
 main {
     flex: 1;
+    
+
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    position: absolute;
+    width: 350px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(89.56deg, #481555 -5.17%, rgba(68, 21, 85, 0.894616) 65%, rgba(3, 1, 0, 0) 103%);
+    mix-blend-mode: normal;
 }
 
 .top-row {

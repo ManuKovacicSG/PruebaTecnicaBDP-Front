@@ -1,4 +1,6 @@
 ﻿@page "/"
+@using BlazorCRUD.model;
+@inject FilmsService FilmsService
 
 <PageTitle>CinemApp</PageTitle>
 
@@ -6,6 +8,18 @@
 <h2>“Tu sitio favorito, para encontrar tus films favoritos”</h2>
 
 @code{
-    public List<FilmsItem> Films {get; set; }
+    public List<FilmItem> Films {get; set; }
     public string Error { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Films = await FilmsService.GetFilms();
+        }
+        catch(Exception e)
+        {
+            Error = e.Message;
+        }
+    }
 }

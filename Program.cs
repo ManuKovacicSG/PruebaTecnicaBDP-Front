@@ -1,7 +1,7 @@
+using BlazorCRUD.model;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using PruebaTecnicaBDP;
-@inject FilmsInterface FilmsService
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
