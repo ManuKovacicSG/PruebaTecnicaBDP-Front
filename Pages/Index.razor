@@ -1,25 +1,21 @@
 ﻿@page "/"
 @using BlazorCRUD.model;
-@inject FilmsService FilmsService
 
 <PageTitle>CinemApp</PageTitle>
 
-<h1>CINEMAPP</h1>
+<div class="title">
+    <img src="../wwwroot/pop-corn_image.svg" />
+<h1>CINEMAPP</h1><br />
+
 <h2>“Tu sitio favorito, para encontrar tus films favoritos”</h2>
+</div>
+
+<form action="/search" method="GET">
+    <input id="input" type="search" placeholder="Buscar en CinemApp" />
+
+    <button class="btn-outline-warning">Search</button>
+</form>
 
 @code{
-    public List<FilmItem> Films {get; set; }
-    public string Error { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        try
-        {
-            Films = await FilmsService.GetFilms();
-        }
-        catch(Exception e)
-        {
-            Error = e.Message;
-        }
-    }
 }

@@ -1,0 +1,29 @@
+﻿.title {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    height: 3.5rem;
+    align-items: center;
+    margin: 4rem;
+}
+
+form {
+    padding: 3rem;
+    width: auto;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+    border-radius: 10px;
+    font-family: 'Murecho';
+}
+
+#input{
+    width: 18rem;
+}
+
+.btn-outline-warning{
+    margin: 1rem;
+}

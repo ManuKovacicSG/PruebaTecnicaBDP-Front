@@ -1,18 +1,37 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Murecho&display=swap');
+
 
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-h1:focus {
-    outline: none;
+    font-family: 'Murecho', sans-serif;
+    color: #ebdcdc;
 }
 
 h1 {
     font-family: 'fascinate inline', cursive;
-    font-size: 2rem;
+    font-size: 4rem;
+}
+
+h3{
+    font-family: 'fascinate inline', cursive;
+    margin: 4rem;
+
+}
+
+/*.cards-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: space-evenly;
+}*/
+
+.card {
+    font-family: 'Murecho';
+    background-color: #171E2B;
 }
 
 a, .btn-link {
