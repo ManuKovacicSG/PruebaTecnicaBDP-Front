@@ -1,7 +1,45 @@
 ﻿@page "/actores"
+@using BlazorCRUD.model
+@inject ICharacterInterface CharacterService
 
 <h3>Actores</h3>
 
+<div class="row">
+    @foreach (var item in Character)
+    {
+        <div class="col-4">
+            <div class="card">
+                <img src="@item.Foto" />
+                <div class="card-body">
+                    <h4 class="card-title">@item.Name</h4>
+                    <p class="card-text">@item.Description </p>
+                    <p class="card-text">@item.BirthDate</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@if(!string.IsNullOrEmpty(Error))
+{
+    <p>Error</p>
+}
+
 @code {
+    public List<CharacterItem> Character { get; set; }
+    public string Error { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Character = await CharacterService.GetCharacters();
+        }
+        catch (Exception e)
+        {
+            Error = e.Message;
+        }
+    }
+
 
 }

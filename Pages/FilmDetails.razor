@@ -1,6 +1,6 @@
 ﻿@page "/filmdetails"
 @using BlazorCRUD.model
-@*@inject FilmsService FilmsService*@
+@inject IFilmsInterface FilmsService
 
 <h3>FilmDetails</h3>
 
@@ -13,54 +13,9 @@
             <p class="card-text">Actua firulais</p>
         </div>
     </div>
-
-    <div class="card">
-        <img src="~/favicon.png" />
-        <div class="card-body">
-            <h4 class="card-title">101 Dalmatas</h4>
-            <p class="card-text">Pelis de nenes </p>
-            <p class="card-text">Actua firulais</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="~/favicon.png" />
-        <div class="card-body">
-            <h4 class="card-title">101 Dalmatas</h4>
-            <p class="card-text">Pelis de nenes </p>
-            <p class="card-text">Actua firulais</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="~/favicon.png" />
-        <div class="card-body">
-            <h4 class="card-title">101 Dalmatas</h4>
-            <p class="card-text">Pelis de nenes </p>
-            <p class="card-text">Actua firulais</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="~/favicon.png" />
-        <div class="card-body">
-            <h4 class="card-title">101 Dalmatas</h4>
-            <p class="card-text">Pelis de nenes </p>
-            <p class="card-text">Actua firulais</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="~/favicon.png" />
-        <div class="card-body">
-            <h4 class="card-title">101 Dalmatas</h4>
-            <p class="card-text">Pelis de nenes </p>
-            <p class="card-text">Actua firulais</p>
-        </div>
-    </div>
 </div>
 
-@*<div class="row">
+<div class="row">
     @foreach(var item in Films)
     {
         <div class="col-4">
@@ -74,11 +29,14 @@
             </div>
             </div>
     }    
-</div>*@
+</div>
 
+@if (!string.IsNullOrEmpty(Error))
+{
+    <p>Error</p>
+}
 
-
-@*@code {
+@code {
     public List<FilmItem> Films { get; set; }
     public string Error { get; set; }
 
@@ -86,7 +44,7 @@
     {
         try
         {
-            Films = await FilmsService.GetFilms(new List<FilmItem>());
+            Films = await FilmsService.GetFilms();
         }
         catch (Exception e)
         {
@@ -95,4 +53,4 @@
     }
 
 
-}*@
+}

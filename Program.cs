@@ -8,6 +8,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-builder.Services.AddScoped<FilmsInterface, FilmsService>();
+builder.Services.AddScoped<IFilmsInterface, FilmsService>();
+builder.Services.AddScoped<ICharacterInterface, CharacterService>();
 
 await builder.Build().RunAsync();
