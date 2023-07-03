@@ -1,4 +1,12 @@
-﻿.title {
+﻿#headerApp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.title {
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -7,25 +15,27 @@
     margin: 4rem;
 }
 
-.hero-image{
-    
+.hero-image {
+    padding: 2rem;
 }
 
+
+
 form {
-    padding: 3rem;
+    padding: 1rem;
     width: auto;
     height:fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 8rem;
-    border-radius: 10px;
+    margin-top: 4rem;
+    border-radius: 20px;
     font-family: 'Murecho';
 }
 
 #input{
-    width: 18rem;
+    width: 20rem;
 }
 
 .btn-outline-warning{
